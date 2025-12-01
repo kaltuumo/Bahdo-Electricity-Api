@@ -39,21 +39,21 @@ exports.userLoginSchema = joi.object({
     .pattern(new RegExp('^[0-9]{6,100}$')) // Only numeric characters
 });
 
-// exports.customerSignupSchema = joi.object({
-//     customerNo: joi.string().optional(),
-//     fullname: joi.string().min(3).max(100).required(),
-//     phone: joi.string()
-//         .pattern(/^[0-9]{9,15}$/)
-//         .required(),
-//     gender: joi.string().valid('Male', 'Female').required(),
-//     // required: joi.number().min(0).required(),
-//     // paid: joi.number().min(0).required(),
-//     // discount: joi.number().min(0).optional(), // Add this line to allow discount
-//     // remaining: joi.number().min(0).optional(), // Add this line to allow remaining
-//     statusPerson: joi.string().valid('Single', 'Married').required(),
+exports.customerSignupSchema = joi.object({
+    customerNo: joi.string().optional(),
+    fullname: joi.string().min(3).max(100).required(),
+    phone: joi.string()
+        .pattern(/^[0-9]{9,15}$/)
+        .required(),
+    gender: joi.string().valid('Male', 'Female').required(),
+    // required: joi.number().min(0).required(),
+    // paid: joi.number().min(0).required(),
+    // discount: joi.number().min(0).optional(), // Add this line to allow discount
+    // remaining: joi.number().min(0).optional(), // Add this line to allow remaining
+    statusPerson: joi.string().valid('Single', 'Married').required(),
     
 
-// });
+});
 
 // exports.zoneSignupSchema = joi.object({
 //   zone: joi.string().min(1).max(100).required(),
